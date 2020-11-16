@@ -6,7 +6,7 @@
 <p align="center"><strong>North South University</strong></p>
 <p align="center">Department of Electrical &amp; Computer Engineering</p>
 <p align="center"><strong>Project Proposal</strong></p>
-<p align="center"><strong>Group No</strong>: </p>
+<p align="center"><strong>Group No</strong>: 11</p>
 <p align="center"><strong>Fall 2020</strong></p>
 <p align="center"><strong>Project Name</strong>: Pet Buy &amp; Sell</p>
 <p align="center"><strong>Course No</strong>: CSE 299 <strong>Sec</strong><strong>:</strong> 02</p>
