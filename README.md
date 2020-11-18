@@ -54,8 +54,8 @@ reputed shop only.</p>
 <p><em>Profit</em></p>
 <p>When seller post an add they have to pay a registration fee. There are few label of reg. fee. The
 label are:
-• 0% on small transaction like 0-1,000
-• 5% on medium transactions like 1001-10,000
-• 10% on big transaction like 10,001-no limit
+<p>• 0% on small transaction like 0-1,000</p>
+<p>• 5% on medium transactions like 1001-10,000</p>
+<p>• 10% on big transaction like 10,001-no limit</p>
 This registration fee will collect by the website.
 This is how this application is profitable for all of seller, buyer and developer.<p/>
