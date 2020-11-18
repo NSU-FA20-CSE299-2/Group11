@@ -48,4 +48,14 @@
 <p><strong>Database</strong></p>
 <p>The database was the trickiest part for a system such as this. We needed something with a graph structure. However, due to time constraints and the complexity of designing such a structure on a huge existing database became rather difficult. We ended up using phpmyadmin,  it will handle our entire database. It is not as fast and easily accessed like a graph structured database but it does quite good with the limited data involved.</p>
 <p>&nbsp;</p>
-Readme.md
+<p><strong>Payment</strong></p>
+<p>Our user can pay in several ways. They can pay in cash on delivery or by card. Card works on
+reputed shop only.</p>
+<p><em>Profit</em></p>
+<p>When seller post an add they have to pay a registration fee. There are few label of reg. fee. The
+label are:
+• 0% on small transaction like 0-1,000
+• 5% on medium transactions like 1001-10,000
+• 10% on big transaction like 10,001-no limit
+This registration fee will collect by the website.
+This is how this application is profitable for all of seller, buyer and developer.<p/>
