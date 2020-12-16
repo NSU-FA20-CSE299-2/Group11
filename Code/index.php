@@ -1,4 +1,4 @@
-Enhancement #4 :To Create a home page
+enhancement #4 :To Create a home page
 <?php include "inc/header.php";?> 
 
   <div class="container" >
