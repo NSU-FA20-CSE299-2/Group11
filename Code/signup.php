@@ -48,7 +48,7 @@
         <button class="btn btn-lg btn-dark btn-block" type="submit" name="submit">Sign up</button>
 
         <label>
-           <p style="color:whitesmoke;">Already have an account?<a href="login.html" style="color: aqua;"> Login here..</a></p> 
+           <p style="color:whitesmoke;">Already have an account?<a href="login.html" style="color: aqua;"> Login ..</a></p> 
           </label>
       </form>
     </div>
