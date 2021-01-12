@@ -1,94 +1,140 @@
-<?php include "inc/header.php";?> 
+<?php
+include "database.php";
+?>
+<!DOCTYPE html>
+<html>
 
-  <div class="container" >
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="images/slide-1.jpeg" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="images/slide-2.jpg" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="images/slide-3.jpeg" alt="Third slide">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-	<div class="row">
-		<div class="col-md-8 left">
-			<h1>Pets Information</h1>
-			<div class="row">
-				<div class="col-md-6 left">
-					<img src="images/cat1.jpg" class="img-thumbnail">
-				</div>
-				<div class="col-md-6 right">
-					<h3>Pet Details</h3>
-					<p>Pet Details Pet Details Pet Details Pet Details Pet Details Pet Details Pet Details Pet Details Pet Details</p>
-					<button><a href="addtocart.php"><i class="fa fa-cart-plus"> Add to cart</i></a></button>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 right">
-			<h1>Category</h1>
-			<div class="category">
-				<ul>
-					<li>Cat</li>
-					<li>Dog</li>
-					<li>Fish</li>
-					<li>Bird</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.php">
   
-  <div class="card text-center">
-    <div class="card-body">
-      <h5 class="title">Our Goal</h5>
-      <p class="text">"Will you like to see your moment framed by thousands of clicks? And we will!
-        It's simple: we list the best portfolio of photographers online, help you to make your event successful at the best rates, arrange them in a heartbeat to frame your special events!
-        Intrigued? Today, let 's begin our partnership!
-        Just stay tuned!"</p>
+</head>
+
+<body>
+
+  <h2> PET Lovers Store </h2>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+    <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+    <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
+    <button type="tablink" onclick="parent.location='login.php'">Login </button>
+    <button type="tablink" onclick="parent.location='register.php'">Registration</button>
+    <button type="tablink" onclick="parent.location = 'quickpost.php'">QuickPost</button>
+
+    <div class="links">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-youtube"></a>
     </div>
+
   </div>
-</div>
 
-
-  <footer>
-     <div class="footer">
-       <div class="logo">
-        <h5 class="my-0 mr-md-auto font-weight-normal"> <a href="index.html"><img src="assets/images/logo.jpg" style="height: 50px;" alt=""></a></h5>
-       </div>
-       <div class="f_menu">
-        <ul class="list-group list-group-flush">
-          <a href="index.html"> Home </a>
-          <a href="about.html"> About</a> 
-          <a href="contact.html">Contact Us</a>
-        </ul>
-       </div>
-       <div class="newsteller">
-             <div class="sec_1"> <h5>Get Our Newsteller</h5> </div>
-             <div class= "sec_2">
-               <input type="email" placeholder="Email address.."></input>
-               <button type="submit"> Subscribe</button>
-             </div> 
-             
-       </div>
-      </div>
-  </footer>  
-
-  </body>
+  <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p> Please Search All Kind of Pet's here : </p>
   
+    <form action="search.php" method="POST">
+    <input type="text" name="search" placeholder="Search..">
+
+    <h2>Custom Select</h2>
+
+    <p class="custom-select">
+      <select>
+        <option value="0">Filters:</option>
+        <option value="1">Pet</option>
+        <option value="2">Food</option>
+        <option value="3">Medical</option>
+      </select> </p>
+      
+    <button type="Search" name="submit-search">Search</button></form>
+
+    <?php
+    $result = mysqli_query($conn, "SELECT * FROM quickpost");
+
+
+    while ($row = mysqli_fetch_array($result)) {
+
+
+      echo '<div class="postcard">';
+      echo "<img src='images/" . $row['image'] . "' >";
+      echo '<div class="postcontainer">';
+      echo "<p>" . $row['description'] . "</p>";
+      echo '</div>';
+      echo '</div>';
+    }?>
+
+
+  </div>
+
+
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>
+      This is a pet Animals website!
+      Here you buy and sell your pets like: Anyone can post for sell (Animals) and anyone can buy.
+      simple!
+
+      Lorem Ipsum
+      "Nor is it any further because that is the pain carrots, Minneapolis, wants to get ..."
+      "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+
+
+
+      <p>Where does it come from?
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+      </p>
+
+      Where can I get some?
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+    </p>
+
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p> Phone: +88015***24252 </p>
+    <p> Email: petslovers**@gmail.com </p>
+    <p> Skype: Petslover**.skype.com </p>
+  </div>
+
+
+
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+
+  <div class="footer">
+    <h2>Copyright, “All Rights Reserved”. </h2>
+    <p>Contact: +880192**4587 <address>258/2 Mirpur-2, Dhaka-1216</address>
+    </p>
+  </div>
+
+  <?/*<?php if (isset($_SESSION['username'])) : ?>
+
+  <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+  <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+<?php endif ?>
+*/
+
+</body>
+
 </html>
