@@ -27,7 +27,7 @@ if(isset($_POST['login_user'])){
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registration system PHP and MySQL</title>
+  <title>Registration</title>
   <link rel="stylesheet" type="text/css" href="style.php">
 </head>
 <body>
