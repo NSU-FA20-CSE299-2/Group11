@@ -15,7 +15,7 @@
 <p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1712760642</p>
 <p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:shaifur.shawon@northsouth.edu">shaifur.shawon@northsouth.edu</a></p>
 <p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/WasekRahman/SU19CSE299S16G07NSU/">https://github.com/ShaifurRahmanShawon/CSE299/blob/main/README.md</a></p>
-<p align="center"><strong>Date Prepared</strong><strong>: </strong>13/11/2020</p>
+<p align="center"><strong>Date Prepared</strong><strong>: </strong>22/01/2021</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>INTRODUCTION</strong></p>
