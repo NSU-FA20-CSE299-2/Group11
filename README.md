@@ -4,7 +4,7 @@
 <p align="center"><strong><img src="https://media.dhakatribune.com/uploads/2016/11/nsulogo.jpg" alt="" width="307" height="172" /></strong></p>
 <p align="center"><strong>North South University</strong></p>
 <p align="center">Department of Electrical &amp; Computer Engineering</p>
-<p align="center"><strong>Project Proposal #1</strong></p>
+<p align="center"><strong>Project Report</strong></p>
 <p align="center"><strong>Group No</strong>: 11</p>
 <p align="center"><strong>Fall 2020</strong></p>
 <p align="center"><strong>Project Name</strong>: Pet Buy &amp; Sell</p>
@@ -45,7 +45,7 @@
 <p><strong>Database</strong></p>
 <p>The database was the trickiest part for a system such as this. We needed something with a graph structure. However, due to time constraints and the complexity of designing such a structure on a huge existing database became rather difficult. We ended up using phpmyadmin,  it will handle our entire database. It is not as fast and easily accessed like a graph structured database but it does quite good with the limited data involved.</p>
 <p>&nbsp;</p
-<p>Quick post <p/>
+<p><strong>Quick post </strong><p/>
 <p>I try to use a post option in this web site. so user can post their product easyly.<p/>
 <p><strong>Payment</strong></p>
 <p>Our user can pay in several ways. They can pay in cash on delivery or by card. Card works on
